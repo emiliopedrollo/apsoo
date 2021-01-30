@@ -8,6 +8,9 @@
 /docs
 /vendor
 /.idea/dataSources
+/.idea/dataSources.xml
+/.idea/dataSources.local.xml
+/.idea/inspectionProfiles
 .env
 .env.backup
 .phpunit.result.cache
