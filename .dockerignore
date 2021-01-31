@@ -1,0 +1,9 @@
+/vendor
+/node_modules
+/docs
+/.git
+/.idea
+/database/database.sqlite
+/_ide_helper.php
+/_ide_helper_models.php
+/.phpstorm.meta.php

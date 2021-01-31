@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  apsoo:
+    build:
+      context: .
+    volumes:
+      - ./:/var/www/site
+    ports:
+      - "8000:8000"
