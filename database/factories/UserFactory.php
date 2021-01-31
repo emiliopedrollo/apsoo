@@ -21,7 +21,7 @@ class UserFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'name' => $this->faker->name,
@@ -30,6 +30,18 @@ class UserFactory extends Factory
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10),
         ];
+    }
+
+    /**
+     * @return $this
+     */
+    public function admin(): UserFactory
+    {
+        return $this->state(function (){
+            return [
+                'admin' => true
+            ];
+        });
     }
 
 }
