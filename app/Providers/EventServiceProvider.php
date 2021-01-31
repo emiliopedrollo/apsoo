@@ -2,11 +2,15 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use App\Observers\UserObserver;
+use App\Events\UserSetAsAdmin;
+use App\Events\UserUnsetAsAdmin;
+use App\Listeners\SendDemoteMail;
+use App\Listeners\SendNewAdminMail;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use App\Models\User;
-use App\Observers\UserObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -19,6 +23,12 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        UserSetAsAdmin::class => [
+            SendNewAdminMail::class
+        ],
+        UserUnsetAsAdmin::class => [
+            SendDemoteMail::class
+        ]
     ];
 
     /**
