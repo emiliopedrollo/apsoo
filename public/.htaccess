@@ -19,3 +19,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+php_flag  xdebug.remote_enable on
+php_flag  xdebug.remote_autostart on
