@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,20 @@ class RouteServiceProvider extends ServiceProvider
      * @var string|null
      */
     // protected $namespace = 'App\\Http\\Controllers';
+
+    public function register()
+    {
+        parent::register();
+        Router::$verbs = array_merge(Router::$verbs,['LOCK','UNLOCK']);
+
+        Router::macro('lock',function($uri, $action){
+            return $this->addRoute('LOCK', $uri, $action);
+        });
+
+        Router::macro('unlock',function($uri, $action){
+            return $this->addRoute('UNLOCK', $uri, $action);
+        });
+    }
 
     /**
      * Define your route model bindings, pattern filters, etc.
