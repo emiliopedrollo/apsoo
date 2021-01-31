@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Team;
 use App\Models\User;
 use Hash;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -33,19 +32,4 @@ class UserFactory extends Factory
         ];
     }
 
-    /**
-     * Indicate that the user should have a personal team.
-     *
-     * @return $this
-     */
-    public function withPersonalTeam()
-    {
-        return $this->has(
-            Team::factory()
-                ->state(function (/** @noinspection PhpUnusedParameterInspection */ array $attributes, User $user) {
-                    return ['name' => $user->name.'\'s Team', 'user_id' => $user->id, 'personal_team' => true];
-                }),
-            'ownedTeams'
-        );
-    }
 }
