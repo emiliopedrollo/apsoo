@@ -48,6 +48,16 @@
                     </x-jet-secondary-button>
                 @endif
 
+                <div class="mt-4">
+                    <x-jet-label for="enable_gravatar">
+                        <div class="flex items-center">
+                            <x-jet-checkbox name="enable_gravatar" id="enable_gravatar"
+                                            wire:model.defer="state.enable_gravatar"/>
+                            <div class="ml-2">{{ __("Use Gravatar") }}</div>
+                        </div>
+                    </x-jet-label>
+                </div>
+
                 <x-jet-input-error for="photo" class="mt-2" />
             </div>
         @endif

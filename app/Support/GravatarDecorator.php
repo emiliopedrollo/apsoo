@@ -26,9 +26,9 @@ class GravatarDecorator extends Gravatar
         return parent::get($email, gettype($email) === 'string' ? $hash_email : false);
     }
 
-    public function getUserAvatar(User $user): string
+    public function getUserAvatar(User $user, $default = self::DEFAULT_IMAGE_WAVATAR): string
     {
-        return $this->setDefaultImage(static::DEFAULT_IMAGE_WAVATAR)
+        return $this->setDefaultImage($default)
             ->get($user->enable_gravatar ? $user->email : $user->id);
     }
 

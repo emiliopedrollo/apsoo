@@ -61,12 +61,10 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens;
     use HasFactory;
+    use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    use HasProfilePhoto {
-        defaultProfilePhotoUrl as originalDefaultProfilePhotoUrl;
-    }
 
     /**
      * The attributes that are mass assignable.
@@ -96,6 +94,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'enable_gravatar' => 'bool',
     ];
 
     /**
@@ -109,7 +108,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
     protected function defaultProfilePhotoUrl(): string
     {
-        return Gravatar::getUserAvatar($this);
+        $default = sprintf("https://ui-avatars.com/api//%s/512/EBF4FF/7F9CF5/2/0.5/1/1/0/png",
+            urlencode($this->name)
+        );
+        return Gravatar::getUserAvatar($this,$default);
     }
 
 
