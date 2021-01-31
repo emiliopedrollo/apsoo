@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/docs" />
       <excludeFolder url="file://$MODULE_DIR$/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
@@ -14,6 +15,16 @@
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/9c" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/36" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/76" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/httpRequests" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/inspectionProfiles" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/2c" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/9a" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/27" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/b0" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/ca" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/cb" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/d8" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/f7" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
