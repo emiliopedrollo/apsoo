@@ -65,8 +65,15 @@ Também há _decorators_ para classes de pacotes de terceiros como, por exemplo:
 
 #### Observer
 
-Neste sistema foi implementado a classe `UserObserver` que funciona como um _observer_ para a classe `User`. O 
-comportamento desta classe já foi descrito na sessão [UserObserver](#UserObserver).
+Algumas coias acontecem de uma forma um pouco diferente do que foi exemplificado em aula:
+
+1. Não é estritamente o _observer_ que se cadastra, mas sim a própria aplicação num determinado momento é a responsável
+   por cadastrar os _observers_.
+2. _Observers_ são cadastrados em classes e não em objetos por padrão. Apesar de ser possível cadastrar a apenas um
+   objeto, neste caso é mais útil cadastrar-se com todos.
+3. Os métodos chamados pelo objeto observado no seu _observer_ recebem como argumento o próprio objeto observado ao
+   invés de tê-lo como uma property, desta forma uma mesma instância de _observer_ pode ser responsável por N objetos
+   observados.
 
 #### Command
 
@@ -183,15 +190,7 @@ delega a construção de objetos da classe `User` que herda de `Model`.
 
 ![Diagrama de Sequencia para UserObserver](static/user-observer-sequence-diagram.png)
 
-Algumas coias acontecem de uma forma um pouco diferente do que foi exemplificado em aula:
-
-1. Não é estritamente o _observer_ que se cadastra, mas sim a própria aplicação num determinado momento é a responsável
-   por cadastrar os _observers_.
-2. _Observers_ são cadastrados em classes e não em objetos por padrão. Apesar de ser possível cadastrar a apenas um
-   objeto, neste caso é mais útil cadastrar-se com todos.
-3. Os métodos chamados pelo objeto observado no seu _observer_ recebem como argumento o próprio objeto observado ao 
-   invés de tê-lo como uma property, desta forma uma mesma instância de _observer_ pode ser responsável por N objetos
-   observados.
+O comportamento mais detalhado desta classe é descrito na seção [Observer](#Observer).
 
 ### Doxygen
 
