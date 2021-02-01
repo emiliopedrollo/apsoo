@@ -194,4 +194,8 @@ O comportamento mais detalhado desta classe é descrito na seção [Observer](#O
 
 ### Doxygen
 
-A documentação autogerada pelo _Doxygen_ pode ser encontrada na pasta [docs](docs/index.html).
+A documentação autogerada pelo _Doxygen_ pode ser encontrada na pasta '_docs_'.
+
+Devido ao tamanho significativo da pasta e do fato de o mesmo não poder ser lido e interpretado pelo _GitHub_ foi 
+escolhido que a pasta não constará no repositório porem ela deve estar contida no arquivo compactado enviado na 
+atividade do _Google Classroom_.
