@@ -175,7 +175,7 @@ executar algumas tarefas de SysAdmin (como definir usuário como admin.) via com
 
 #### Classes
 
-//todo
+![Diagrama de Classes](static/class-diagram.png)
 
 #### Sequência
 
